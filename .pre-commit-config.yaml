@@ -1,0 +1,10 @@
+# https://pre-commit.com/#creating-new-hooks
+# https://stackoverflow.com/a/59499550
+repos:
+  - repo: local
+    hooks:
+      - id: check-license
+        name: Checking if license is not plain
+        # quoting -> https://stackoverflow.com/a/1250279
+        entry: bash -c 'cat _files/config/config.php | grep "'"'"'license_key'"'"' => getenv('"'"'LICENSE_KEY'"'"'),$"'
+        language: system
