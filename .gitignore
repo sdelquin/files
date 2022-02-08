@@ -1,5 +1,4 @@
 .env
 _files/cache
 contents
-/index.php
 .DS_Store
