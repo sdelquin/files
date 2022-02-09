@@ -1,3 +1,5 @@
+#!/bin/bash
+
 FILE=_files/config/config.php
 
 sed -i '' "s/'license_key' => .*,/'license_key' => getenv('LICENSE_KEY'),/g" $FILE

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 read -p "Clean ALL _files.zip. Are you sure? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
