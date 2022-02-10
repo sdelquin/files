@@ -72,6 +72,14 @@ If you want to clean cache:
 $ make clean-cache
 ```
 
+### Get version
+
+If you want to get the version of the installed Files app:
+
+```console
+$ make get-version
+```
+
 ## Production
 
 Keep in mind to assign group `www-data` for `_files` folder:
