@@ -82,11 +82,21 @@ $ make get-version
 
 ## Production
 
-Keep in mind to assign group `www-data` for `_files` folder:
+Keep in mind to assign group `nginx` for `_files` folder:
 
 ```console
-$ sudo chgrp www-data _files
+$ sudo chgrp nginx _files
+$ sudo chmod 775 _files
 ```
+
+A bunch of php modules should be installed in order to work properly. One of the most important one is [gd](https://www.php.net/manual/es/book.image.php) because it allows to make image thumbnails. You can install with:
+
+```console
+$ sudo apt install php8.2-gd
+$ sudo systemctl restart php8.2-fpm
+```
+
+You can check config status with https://files.sdelquin.me/index.php?check=1. You can compare it with the "official" one here https://demo.files.gallery/index.php?check=1
 
 If you want to clean cache, you must to do it as sudo:
 
