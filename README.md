@@ -27,7 +27,7 @@ This project aims to be a scaffolding for [Files app](https://www.files.gallery/
 This will launch Docker services and you can reach Files app on http://localhost:8000:
 
 ```console
-$ make dev
+$ just dev
 ```
 
 ### Sync contents
@@ -35,7 +35,7 @@ $ make dev
 If you want to sync your development contents with production:
 
 ```console
-$ make sync
+$ just sync
 ```
 
 ### Update application
@@ -43,7 +43,7 @@ $ make sync
 If you want to update to latest version of Files app:
 
 ```console
-$ make update
+$ just update
 ```
 
 > 💡 &nbsp;After updating, file `_files/config/config.php` is also updated with new available settings. If license is overwritten in plain, you can fix it with the next action: fix license.
@@ -53,7 +53,7 @@ $ make update
 If you want to keep license out of control version:
 
 ```console
-$ make fix-license
+$ just fix-license
 ```
 
 ### Clean folder zip files
@@ -61,7 +61,7 @@ $ make fix-license
 If you want to clean `_files.zip` files inside `contents` folder:
 
 ```console
-$ make clean-zip
+$ just clean-zip
 ```
 
 ### Clean cache
@@ -69,7 +69,7 @@ $ make clean-zip
 If you want to clean cache:
 
 ```console
-$ make clean-cache
+$ just clean-cache
 ```
 
 ### Get version
@@ -77,7 +77,7 @@ $ make clean-cache
 If you want to get the version of the installed Files app:
 
 ```console
-$ make get-version
+$ just get-version
 ```
 
 ## Production
@@ -101,5 +101,5 @@ You can check config status with https://files.sdelquin.me/index.php?check=1. Yo
 If you want to clean cache, you must to do it as sudo:
 
 ```console
-$ sudo make clean-cache
+$ sudo just clean-cache
 ```
